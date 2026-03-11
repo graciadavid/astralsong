@@ -7,83 +7,97 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2575.7">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    span.s1 {font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1">&lt;title&gt;AstralSong&lt;/title&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;style&gt;</p>
-<p class="p1">body{</p>
-<p class="p1">font-family:Arial;</p>
-<p class="p1">background:#0f1118;</p>
-<p class="p1">color:white;</p>
-<p class="p1">display:flex;</p>
-<p class="p1">justify-content:center;</p>
-<p class="p1">align-items:center;</p>
-<p class="p1">height:100vh;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">.box{</p>
-<p class="p1">text-align:center;</p>
-<p class="p1">background:#1a1d27;</p>
-<p class="p1">padding:40px;</p>
-<p class="p1">border-radius:12px;</p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">button{</p>
-<p class="p1">padding:12px 20px;</p>
-<p class="p1">background:#1db954;</p>
-<p class="p1">border:none;</p>
-<p class="p1">border-radius:8px;</p>
-<p class="p1">color:white;</p>
-<p class="p1">font-size:16px;</p>
-<p class="p1">cursor:pointer;</p>
-<p class="p1">}</p>
-<p class="p1">&lt;/style&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;div class="box"&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h2&gt;Tu canción cósmica de hoy&lt;/h2&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;button onclick="getSong()"&gt;Calcular&lt;/button&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;h3 id="song"&gt;&lt;/h3&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;a id="spotify" target="_blank" style="display:none"&gt;Escuchar en Spotify&lt;/a&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">async function getSong(){</p>
-<p class="p2"><br></p>
-<p class="p1">const res = await fetch("/api/song")</p>
-<p class="p2"><br></p>
-<p class="p1">const data = await res.json()</p>
-<p class="p2"><br></p>
-<p class="p1">document.getElementById("song").innerText =</p>
-<p class="p1">data.song + " - " + data.artist</p>
-<p class="p2"><br></p>
-<p class="p1">const link = document.getElementById("spotify")</p>
-<p class="p2"><br></p>
-<p class="p1">link.href = data.url</p>
-<p class="p1">link.style.display="block"</p>
-<p class="p2"><br></p>
-<p class="p1">}</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;title&gt;AstralSong&lt;/title&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;style&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">body{</span></p>
+<p class="p1"><span class="s1">font-family:Arial;</span></p>
+<p class="p1"><span class="s1">background:#0f1118;</span></p>
+<p class="p1"><span class="s1">color:white;</span></p>
+<p class="p1"><span class="s1">display:flex;</span></p>
+<p class="p1"><span class="s1">justify-content:center;</span></p>
+<p class="p1"><span class="s1">align-items:center;</span></p>
+<p class="p1"><span class="s1">height:100vh;</span></p>
+<p class="p1"><span class="s1">margin:0;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">.box{</span></p>
+<p class="p1"><span class="s1">text-align:center;</span></p>
+<p class="p1"><span class="s1">background:#1a1d27;</span></p>
+<p class="p1"><span class="s1">padding:40px;</span></p>
+<p class="p1"><span class="s1">border-radius:12px;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">button{</span></p>
+<p class="p1"><span class="s1">padding:12px 20px;</span></p>
+<p class="p1"><span class="s1">background:#1db954;</span></p>
+<p class="p1"><span class="s1">border:none;</span></p>
+<p class="p1"><span class="s1">border-radius:8px;</span></p>
+<p class="p1"><span class="s1">color:white;</span></p>
+<p class="p1"><span class="s1">font-size:16px;</span></p>
+<p class="p1"><span class="s1">cursor:pointer;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">a{</span></p>
+<p class="p1"><span class="s1">display:inline-block;</span></p>
+<p class="p1"><span class="s1">margin-top:10px;</span></p>
+<p class="p1"><span class="s1">background:#1db954;</span></p>
+<p class="p1"><span class="s1">padding:10px 16px;</span></p>
+<p class="p1"><span class="s1">border-radius:8px;</span></p>
+<p class="p1"><span class="s1">color:white;</span></p>
+<p class="p1"><span class="s1">text-decoration:none;</span></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/style&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;div class="box"&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h2&gt;Tu canción cósmica de hoy&lt;/h2&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;button onclick="getSong()"&gt;Calcular&lt;/button&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;h3 id="song"&gt;&lt;/h3&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;a id="spotify" target="_blank" style="display:none"&gt;Escuchar en Spotify&lt;/a&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">async function getSong(){</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">const res = await fetch("/api/song")</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">const data = await res.json()</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">document.getElementById("song").innerText =</span></p>
+<p class="p1"><span class="s1">data.song + " - " + data.artist</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">const link = document.getElementById("spotify")</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">link.href = data.url</span></p>
+<p class="p1"><span class="s1">link.style.display="block"</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/script&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
