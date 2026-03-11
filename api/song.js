@@ -1,5 +1,8 @@
 export default async function handler(req, res) {
 
+res.setHeader("Access-Control-Allow-Origin", "*")
+res.setHeader("Access-Control-Allow-Methods", "GET")
+
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET
 
@@ -34,11 +37,9 @@ const data = await search.json()
 const track = data.tracks.items[0]
 
 res.status(200).json({
-
 song:track.name,
 artist:track.artists[0].name,
 url:track.external_urls.spotify
-
 })
 
 }
