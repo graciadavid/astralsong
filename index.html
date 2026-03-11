@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1">&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1">&lt;title&gt;AstralSong&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;style&gt;</p>
+<p class="p1">body{</p>
+<p class="p1">font-family:Arial;</p>
+<p class="p1">background:#0f1118;</p>
+<p class="p1">color:white;</p>
+<p class="p1">display:flex;</p>
+<p class="p1">justify-content:center;</p>
+<p class="p1">align-items:center;</p>
+<p class="p1">height:100vh;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">.box{</p>
+<p class="p1">text-align:center;</p>
+<p class="p1">background:#1a1d27;</p>
+<p class="p1">padding:40px;</p>
+<p class="p1">border-radius:12px;</p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">button{</p>
+<p class="p1">padding:12px 20px;</p>
+<p class="p1">background:#1db954;</p>
+<p class="p1">border:none;</p>
+<p class="p1">border-radius:8px;</p>
+<p class="p1">color:white;</p>
+<p class="p1">font-size:16px;</p>
+<p class="p1">cursor:pointer;</p>
+<p class="p1">}</p>
+<p class="p1">&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;div class="box"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h2&gt;Tu canción cósmica de hoy&lt;/h2&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;button onclick="getSong()"&gt;Calcular&lt;/button&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;h3 id="song"&gt;&lt;/h3&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;a id="spotify" target="_blank" style="display:none"&gt;Escuchar en Spotify&lt;/a&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">async function getSong(){</p>
+<p class="p2"><br></p>
+<p class="p1">const res = await fetch("/api/song")</p>
+<p class="p2"><br></p>
+<p class="p1">const data = await res.json()</p>
+<p class="p2"><br></p>
+<p class="p1">document.getElementById("song").innerText =</p>
+<p class="p1">data.song + " - " + data.artist</p>
+<p class="p2"><br></p>
+<p class="p1">const link = document.getElementById("spotify")</p>
+<p class="p2"><br></p>
+<p class="p1">link.href = data.url</p>
+<p class="p1">link.style.display="block"</p>
+<p class="p2"><br></p>
+<p class="p1">}</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
